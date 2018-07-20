@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Natural Language Processing (NLP)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://bootswatch.com/4/united/bootstrap.css" media="screen">
+    <link rel="stylesheet" href="https://bootswatch.com/_assets/css/custom.min.css">
+    <script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+      <div class="container">
+        <a href="index.html" class="navbar-brand">Natural Language Processing</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#idea">Project Idea</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#methodology">Methodology</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#results">Results</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#lessons">Lessons Learned</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#next">Next Steps</a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="https://blog.algorithmia.com/introduction-natural-language-processing-nlp/" target="_blank">What is NLP?</a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+        <div class="jumbotron">
+          <h1 class="display-3" id="top">Natural Language Processing (NLP) of EHR Clinical Notes</h1>
+          <p class="lead">Compare and contrast classification models in the PySpark library</p>
+          <hr class="my-4">
+          <p class="lead">
+            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+          </p>
+        </div>
+        
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h1 id="title">Natural Language Processing in Healthcare</h1>
+              <hr class="my-4">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="bs-component">
+              <blockquote class="blockquote">
+                <p class="mb-0">It has been estimated that physicians spend 49% of their hours on paperwork and inputting/organizing data within the EHR system. Automating these routines can significantly improve the staff’s productivity, efficiency, and morale.</p>
+                <footer class="blockquote-footer"><cite title="romexsoft">https://www.romexsoft.com/blog/nlp-in-healthcare/</cite></footer>
+              </blockquote>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="bs-component">
+              <blockquote class="blockquote text-center">
+                <p class="mb-0">It is predicted that by 2024, natural language processing in healthcare will hit $4.3 billion. The abundance of information now available to the clinicians is certainly beneficial for healthcare quality, yet extracting the truly relevant and most important bits have become rather challenging.</p>
+                <footer class="blockquote-footer"><cite title="romexsoft">https://www.romexsoft.com/blog/nlp-in-healthcare/</cite></footer>
+              </blockquote>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="bs-component">
+              <blockquote class="blockquote text-right">
+                <p class="mb-0">Introducing natural language processing to electronic medical records may be the layering stone of solving common problems with data extraction and transitioning to more intelligent, intuitive, and streamlined reports medical professionals can use on a daily basis.</p>
+                <footer class="blockquote-footer"><cite title="romexsoft">https://www.romexsoft.com/blog/nlp-in-healthcare/</cite></footer>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+        <br/>
+        <br/>
+        
+        <div class="row" id="idea">
+            <h1>Project Idea</h1>
+        </div>
+        <hr class="my-4">
+        <div class="row">
+          <div class="col-lg-8 col-md-7 col-sm-6">
+            <p class="lead">A common use case for NLP could be classifying clinical notes into categories. As a use case, we want to classify patient clinical notes from an EHR system into two buckets: patients who are at risk for developing Sepsis and those who are not.</p>
+              <p class="lead">While learning about NLP classification models, we wanted to analyze which models would work best for our use case. In this project we are attempting to compare and contrast various classification models in the PySpark library.</p>
+              <h3>Why PySpark?</h3>
+              <p class="lead"> Apache Spark is an open-source processing engine built around speed, ease of use, and analytics. Developed to utilize distributed, in-memory data structures to improve data processing speeds for most workloads, Spark performs up to 100 times faster than Hadoop MapReduce for iterative algorithms or interactive data mining. It also supports Java, Scala, and Python APIs for ease of development.
+              <p class="lead">For programmers already familiar with Python, the PySpark API provides easy access to the extremely high-performance data processing enabled by Spark’s Scala architecture —without the need
+                to learn any Scala. </p>
+          </div>
+          <div class="col-lg-4 col-md-5 col-sm-6">
+            <img style="height: 200px; width: 100%; display: block;" src="images/choice.jpg" alt="Card image">
+          </div>
+        </div>
+        <br/>
+        <br/>
+        
+        <div class="row">
+            <h1 id="methodology">Methodology</h1>
+        </div>
+        <hr class="my-4">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="bs-component">
+                    <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                      <div class="card-header">Dataset</div>
+                      <div class="card-body">
+                        <h4 class="card-title">Dataset for training models</h4>
+                        <p class="card-text">We acquired a training dataset of over 5,000 EHR Clinical Notes as our training dataset. These notes were classified as "include for Sepsis review" and "exclude for Sepsis review".</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="bs-component">
+                     <div class="card text-white bg-warning mb-3" style="max-width: 20rem;">
+                      <div class="card-header">NLP Pipeline</div>
+                      <div class="card-body">
+                        <h4 class="card-title">Build NLP Pipeline</h4>
+                        <p class="card-text">We utilized examples discussed in class to program our NLP pipeline.</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="bs-component">
+                    <div class="card text-white bg-info mb-3" style="max-width: 20rem;">
+                      <div class="card-header">Models</div>
+                      <div class="card-body">
+                        <h4 class="card-title">Evaluate classification models</h4>
+                        <p class="card-text">We used PySpark documentation to program and evaluate various classification models in PySpark. Our goal was to evaluate models for accuracy, processing time and ease of implementation.</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        
+        <div class="row">
+            <h1 id="results">Results</h1>
+        </div>
+        <hr class="my-4">
+        
+        <div class="row">
+            <h1 id="lessons">Technologies Used and Lessons Learned</h1>
+        </div>
+        <hr class="my-4">
+        
+        <div class="row">
+            <h1 id="next">Next Steps</h1>
+        </div>
+        <hr class="my-4">
+        
+        <footer id="footer">
+        <div class="row">
+          <div class="col-lg-12">
+
+            <ul class="list-unstyled">
+              <li class="float-lg-right"><a href="#top">Back to top</a></li>
+            
+              <li><a href="https://github.com/bbuchake/nlp-pyspark">GitHub</a></li>
+              <li><a href="mailto:bilwa.buchake@gmail.com">Contact</a></li>
+            </ul>
+              <p>Made by <a href="https://www.linkedin.com/in/bilwabuchake/">Bilwa Buchake</a> and <a href="https://www.linkedin.com/in/nodira-mamatova-b063015/">Nodira Mamatova</a>.</p>
+
+          </div>
+        </div>
+
+      </footer>
+    </div>
+
+</body>
+</html>

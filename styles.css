@@ -1,0 +1,17 @@
+body
+{
+}
+
+.pie {
+    width: 50%;
+    height: auto;
+    display: block;
+}
+.comp-img{
+    width:80%;
+    height:auto;
+}
+.thumbnail {
+    width:300px;
+    height:auto;
+}
