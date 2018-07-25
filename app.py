@@ -7,7 +7,7 @@ def index():
     return render_template('index.html')
 
 
-@app.route("/accuracy_plot")
+@app.route("/accuracy_plot", methods=['GET'])
 def accuracy_plot():
     data_all = pd.read_csv('data/models_analysis.csv')
     data = [{
@@ -19,7 +19,7 @@ def accuracy_plot():
 
     return jsonify(data)
 
-@app.route("/duration_plot")
+@app.route("/duration_plot", methods=['GET'])
 def duration_plot():
     data_all = pd.read_csv('data/models_analysis.csv')
     data = [{
@@ -29,7 +29,7 @@ def duration_plot():
 
     return jsonify(data)
 
-@app.route("/duration_vs_accuracy_plot")
+@app.route("/duration_vs_accuracy_plot", methods=['GET'])
 def duration_vs_accuracy_plot():
     data_all = pd.read_csv('data/models_analysis.csv')
     data = [{
