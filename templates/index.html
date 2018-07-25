@@ -33,7 +33,7 @@
               <a class="nav-link" href="#results">Results</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#lessons">Lessons Learned</a>
+              <a class="nav-link" href="#technologies">Technologies Used</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#next">Next Steps</a>
@@ -56,7 +56,7 @@
           <p class="lead">Compare and contrast classification models in the PySpark library</p>
           <hr class="my-4">
           <p class="lead">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+            <a class="btn btn-primary btn-lg" href="#idea" role="button">Learn more</a>
           </p>
         </div>
         
@@ -104,16 +104,20 @@
         <hr class="my-4">
         <div class="row">
           <div class="col-lg-8 col-md-7 col-sm-6">
-            <p class="lead">A common use case for NLP could be classifying clinical notes into categories. As a use case, we want to classify patient clinical notes from an EHR system into two buckets: patients who are at risk for developing Sepsis and those who are not.</p>
+            <p class="lead">A common application for NLP in Healthcare could be classifying clinical notes into categories. As a use case, we want to classify patient clinical notes from an EHR system into two buckets: patients who are at risk for developing Sepsis and those who are not.</p>
               <p class="lead">While learning about NLP classification models, we wanted to analyze which models would work best for our use case. In this project we are attempting to compare and contrast various classification models in the PySpark library.</p>
-              <h3>Why PySpark?</h3>
-              <p class="lead"> Apache Spark is an open-source processing engine built around speed, ease of use, and analytics. Developed to utilize distributed, in-memory data structures to improve data processing speeds for most workloads, Spark performs up to 100 times faster than Hadoop MapReduce for iterative algorithms or interactive data mining. It also supports Java, Scala, and Python APIs for ease of development.
-              <p class="lead">For programmers already familiar with Python, the PySpark API provides easy access to the extremely high-performance data processing enabled by Spark’s Scala architecture —without the need
-                to learn any Scala. </p>
           </div>
           <div class="col-lg-4 col-md-5 col-sm-6">
             <img style="height: 200px; width: 100%; display: block;" src="../static/images/choice.jpg" alt="Card image">
           </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+              <h3>Why PySpark?</h3>
+              <p class="lead"> Apache Spark is an open-source processing engine built around speed, ease of use, and analytics. Developed to utilize distributed, in-memory data structures to improve data processing speeds for most workloads, Spark performs up to 100 times faster than Hadoop MapReduce for iterative algorithms or interactive data mining. It also supports Java, Scala, and Python APIs for ease of development.
+              <p class="lead">For programmers already familiar with Python, the PySpark API provides easy access to the extremely high-performance data processing enabled by Spark’s Scala architecture —without the need
+              to learn any Scala. </p>
+            </div>
         </div>
         <br/>
         <br/>
@@ -129,7 +133,7 @@
                       <div class="card-header">Dataset</div>
                       <div class="card-body">
                         <h4 class="card-title">Dataset for training models</h4>
-                        <p class="card-text">We acquired a training dataset of over 5,000 EHR Clinical Notes as our training dataset. These notes were classified as "include for Sepsis review" and "exclude for Sepsis review".</p>
+                        <p class="card-text">We acquired a training dataset of over 5,000 EHR Clinical Notes as our training dataset. These notes were classified as "include for Sepsis review" and "exclude for Sepsis review".<br/><br/><br/><br/></p>
                       </div>
                     </div>
                 </div>
@@ -140,18 +144,27 @@
                       <div class="card-header">NLP Pipeline</div>
                       <div class="card-body">
                         <h4 class="card-title">Build NLP Pipeline</h4>
-                        <p class="card-text">We utilized examples discussed in class to program our NLP pipeline.</p>
+                        <p class="card-text">We utilized examples discussed in class to program our NLP pipeline.<br/> Features:
+                            <ul>
+                                <li>Length</li>
+                                <li>String Indexer</li>
+                                <li>Tokenizer</li>
+                                <li>Stop Words Remover</li>
+                                <li>Hashing TF</li>
+                                <li>IDF</li>
+                          </ul>
+                          </p>
                       </div>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="bs-component">
-                    <div class="card text-white bg-info mb-3" style="max-width: 20rem;">
+                    <div class="card text-white bg-success mb-3" style="max-width: 20rem;">
                       <div class="card-header">Models</div>
                       <div class="card-body">
                         <h4 class="card-title">Evaluate classification models</h4>
-                        <p class="card-text">We used PySpark documentation to program and evaluate various classification models in PySpark. Our goal was to evaluate models for accuracy, processing time and ease of implementation.</p>
+                        <p class="card-text">We used PySpark documentation to program and evaluate various classification models in PySpark. Our goal was to evaluate models for accuracy, processing time and ease of implementation.<br/><br/><br/><br/></p>
                       </div>
                     </div>
                 </div>
@@ -161,7 +174,7 @@
         <br/>
         
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-12 col-md-12">
                 
                 <h1 id="results">Results</h1>
             
@@ -174,13 +187,65 @@
         </div>
         <hr class="my-4">
         
+        <h1 id="technologies">Technologies Used</h1>
         <div class="row">
-            <h1 id="lessons">Technologies Used and Lessons Learned</h1>
+            <div class="col-lg-6 col-md-6">
+                <ul class="list-group">
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    PySpark
+                    <span class="badge badge-primary badge-pill">NLP</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Python/Pandas
+                    <span class="badge badge-primary badge-pill">Data cleanup</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Flask
+                    <span class="badge badge-primary badge-pill">Web Server</span>
+                  </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    HTML, CSS, Javascript
+                    <span class="badge badge-primary badge-pill">Web Page</span>
+                  </li>
+                </ul>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <ul class="list-group">
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Plotly
+                    <span class="badge badge-primary badge-pill">Visuals</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Excel VBA
+                    <span class="badge badge-primary badge-pill">Data setup</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Git
+                    <span class="badge badge-primary badge-pill">Source Control</span>
+                  </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Heroku
+                    <span class="badge badge-primary badge-pill">Deployment</span>
+                  </li>
+                </ul>
+            </div>
         </div>
         <hr class="my-4">
         
+        <h1 id="next">Lessons Learned and Next Steps</h1>
         <div class="row">
-            <h1 id="next">Next Steps</h1>
+            <div class="col-md-12 col-lg-12">
+                <p class="lead">
+                    <ul>
+                        <li>There is a need for larger processing power for PySpark.</li>
+                        <li>Our scope was well defined and achievable.</li>
+                        <li>We tried to leverage <i>relevant</i> technical skills we learned throughout the boot camp.</li>
+                        <li>We used classification models from the PySpark library only; we could try and use other libraries such as SKLearn, SpaCy, NLTK.</li>
+                        <li>We used a dataset of only 150 notes for our project. With more processing power (such as using an AWS server), we could expand our dataset.</li>
+                    </ul>
+                </p>
+                
+            </div>
         </div>
         <hr class="my-4">
         
@@ -214,7 +279,7 @@
             var trace1 = {
                 x: data[0].x,
                 y: data[0].y,
-                name: 'Models',
+                name: '<span style="color:rgb(209, 82, 39)">Accuracy < 94%</span><br/><span style="color:rgb(234, 180, 42)">Accuracy between 94% and 97%</span>',
                 type: 'bar',
                 marker:{
                     color: data[0].color
@@ -225,6 +290,7 @@
             var data = [trace1];
             
             var layout = {
+             showlegend: false,
              title: 'Model Vs. Accuracy',
              xaxis: {
                title: 'Model Split',
@@ -264,6 +330,7 @@
             var data = [trace1];
             
             var layout = {
+             showlegend: false,
              title: 'Model Vs. Duration',
              xaxis: {
                title: 'Model Split',
@@ -307,6 +374,7 @@
             var data = [trace1];
             
             var layout = {
+             showlegend: false,
              title: 'Accuracy Vs. Duration',
              xaxis: {
                title: 'Accuracy %',

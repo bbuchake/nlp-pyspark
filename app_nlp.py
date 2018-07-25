@@ -105,7 +105,7 @@ for model in models:
                         'train_test_split': num,
                         'accuracy': accuracy,
                         'duration': end-start,
-                        'complexity': 3}
+                        'complexity': 2}
             models_master_list.append(dict)
     
     if(model == 'One-vs-Rest Classifier'):
@@ -117,7 +117,7 @@ for model in models:
                         'train_test_split': num,
                         'accuracy': accuracy,
                         'duration': end-start,
-                        'complexity': 3}
+                        'complexity': 4}
             models_master_list.append(dict)
 
     if(model == 'GBT Classifier'):
@@ -129,7 +129,7 @@ for model in models:
                         'train_test_split': num,
                         'accuracy': accuracy,
                         'duration': end-start,
-                        'complexity': 3}
+                        'complexity': 5}
             models_master_list.append(dict)
 
 print(models_master_list)
