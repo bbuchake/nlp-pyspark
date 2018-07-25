@@ -177,17 +177,19 @@
             <div class="col-lg-12 col-md-12">
                 
                 <h1 id="results">Results</h1>
-            
-                <div id="accuracy_plot" style="height: 500px;"></div>
-                <div id="duration_plot" style="height: 500px;"></div>
+                <hr class="my-4">
+                <div id="accuracy_plot" style="height: 600px;"></div>
+                <div id="duration_plot" style="height: 600px;"></div>
                 <div id="duration-vs-accuracy" style="height: 700px;"></div>
             
             </div>
             
         </div>
-        <hr class="my-4">
+        <br/>
+        <br/>
         
         <h1 id="technologies">Technologies Used</h1>
+        <hr class="my-4">
         <div class="row">
             <div class="col-lg-6 col-md-6">
                 <ul class="list-group">
@@ -230,21 +232,21 @@
                 </ul>
             </div>
         </div>
-        <hr class="my-4">
+        <br/>
+        <br/>
         
         <h1 id="next">Lessons Learned and Next Steps</h1>
+        <hr class="my-4">
         <div class="row">
             <div class="col-md-12 col-lg-12">
-                <p class="lead">
-                    <ul>
-                        <li>There is a need for larger processing power for PySpark.</li>
-                        <li>Our scope was well defined and achievable.</li>
-                        <li>We tried to leverage <i>relevant</i> technical skills we learned throughout the boot camp.</li>
-                        <li>We used classification models from the PySpark library only; we could try and use other libraries such as SKLearn, SpaCy, NLTK.</li>
-                        <li>We used a dataset of only 150 notes for our project. With more processing power (such as using an AWS server), we could expand our dataset.</li>
-                    </ul>
-                </p>
-                
+                <ul>
+                    <li class="lead">There is a need for larger processing power for PySpark.</li>
+                    <li class="lead">Our scope was well defined and achievable.</li>
+                    <li class="lead">We tried to leverage <i>relevant</i> technical skills we learned throughout the boot camp.</li>
+                    <li class="lead">We used classification models from the PySpark library only; we could try and use other libraries such as SKLearn, SpaCy, NLTK.</li>
+                    <li class="lead">We used a dataset of only 150 notes for our project. With more processing power (such as using an AWS server), we could expand our dataset.</li>
+                </ul>
+
             </div>
         </div>
         <hr class="my-4">
@@ -267,138 +269,8 @@
       </footer>
     </div>
 
-    <!--script src="../static/plot.js">
+    <script src="../static/plot.js"></script>
     
-    </script-->
-    <script>
-        
-        Plotly.d3.json('/accuracy_plot', function(error, data){
-            if (error) return console.warn(error);
-            console.log(data);
-
-            var trace1 = {
-                x: data[0].x,
-                y: data[0].y,
-                name: '<span style="color:rgb(209, 82, 39)">Accuracy < 94%</span><br/><span style="color:rgb(234, 180, 42)">Accuracy between 94% and 97%</span>',
-                type: 'bar',
-                marker:{
-                    color: data[0].color
-                  },
-                };
-
-
-            var data = [trace1];
-            
-            var layout = {
-             showlegend: false,
-             title: 'Model Vs. Accuracy',
-             xaxis: {
-               title: 'Model Split',
-               titlefont: {
-                 family: 'Calibri',
-                 size: 18,
-                 color: '#7f7f7f'
-               }
-             },
-             yaxis: {
-               title: 'Accuracy %',
-               titlefont: {
-                 family: 'Calibri',
-                 size: 18,
-                 color: '#7f7f7f'
-               }
-             }
-            };
-
-            Plotly.newPlot('accuracy_plot', data, layout);
-        });
-        
-        Plotly.d3.json('/duration_plot', function(error, data){
-            if (error) return console.warn(error);
-            console.log(data);
-
-            var trace1 = {
-                x: data[0].x,
-                y: data[0].y,
-                name: 'Models',
-                type: 'bar',
-                marker:{
-                    color: data[0].color
-                  },
-                };
-
-            var data = [trace1];
-            
-            var layout = {
-             showlegend: false,
-             title: 'Model Vs. Duration',
-             xaxis: {
-               title: 'Model Split',
-               titlefont: {
-                 family: 'Calibri',
-                 size: 18,
-                 color: '#7f7f7f'
-               }
-             },
-             yaxis: {
-               title: 'Duration (seconds)',
-               titlefont: {
-                 family: 'Calibri',
-                 size: 18,
-                 color: '#7f7f7f'
-               }
-             }
-            };
-
-            Plotly.newPlot('duration_plot', data, layout);
-            
-        });
-        
-        Plotly.d3.json('/duration_vs_accuracy_plot', function(error, data){
-            if (error) return console.warn(error);
-            console.log(data);
-
-            var trace1 = {
-                x: data[0].x,
-                y: data[0].y,
-                name: 'Models',
-                mode: 'markers',
-                text: data[0].text,
-                type: 'scatter',
-                marker:{
-                    size: data[0].size,
-                    color: data[0].color
-                  },
-                };
-
-            var data = [trace1];
-            
-            var layout = {
-             showlegend: false,
-             title: 'Accuracy Vs. Duration',
-             xaxis: {
-               title: 'Accuracy %',
-               titlefont: {
-                 family: 'Calibri',
-                 size: 18,
-                 color: '#7f7f7f'
-               }
-             },
-             yaxis: {
-               title: 'Duration (seconds)',
-               titlefont: {
-                 family: 'Calibri',
-                 size: 18,
-                 color: '#7f7f7f'
-               }
-             }
-            };
-
-            Plotly.newPlot('duration-vs-accuracy', data, layout);
-        });
-
-
-    </script>
     
 </body>
 </html>

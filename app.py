@@ -13,7 +13,7 @@ def accuracy_plot():
     data = [{
         "x": data_all.train_test_split.tolist(),
         "y": data_all.accuracy.tolist(),
-        "color": ['rgb(209, 82, 39)' if acc < 94.0 else 'rgb(234, 180, 42)' if acc >= 94.0 and acc < 97.0 else 'rgb(56, 193, 99)' for acc in data_all.accuracy.tolist()],
+        "color": ['rgb(209, 82, 39)' if acc < 93.0 else 'rgb(234, 180, 42)' if acc >= 93.0 and acc < 97.0 else 'rgb(56, 193, 99)' for acc in data_all.accuracy.tolist()],
         "names": ['Accuracy < 94.0', 'Accuracy between 94.0 and 97.0', 'Accuracy > 97.0']
     }]
 
