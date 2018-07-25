@@ -11,7 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../static/styles.css">
 </head>
 
 <body>
@@ -112,7 +112,7 @@
                 to learn any Scala. </p>
           </div>
           <div class="col-lg-4 col-md-5 col-sm-6">
-            <img style="height: 200px; width: 100%; display: block;" src="../images/choice.jpg" alt="Card image">
+            <img style="height: 200px; width: 100%; display: block;" src="../static/images/choice.jpg" alt="Card image">
           </div>
         </div>
         <br/>
@@ -161,9 +161,16 @@
         <br/>
         
         <div class="row">
-            <h1 id="results">Results</h1>
-            <div id="line"></div>
-
+            <div class="col-lg-12">
+                
+                <h1 id="results">Results</h1>
+            
+                <div id="accuracy_plot" style="height: 500px;"></div>
+                <div id="duration_plot" style="height: 500px;"></div>
+                <div id="duration-vs-accuracy" style="height: 700px;"></div>
+            
+            </div>
+            
         </div>
         <hr class="my-4">
         
@@ -195,7 +202,135 @@
       </footer>
     </div>
 
-    <script src="../static/plot.js"></script>
+    <!--script src="../static/plot.js">
+    
+    </script-->
+    <script>
+        
+        Plotly.d3.json('/accuracy_plot', function(error, data){
+            if (error) return console.warn(error);
+            console.log(data);
+
+            var trace1 = {
+                x: data[0].x,
+                y: data[0].y,
+                name: 'Models',
+                type: 'bar',
+                marker:{
+                    color: data[0].color
+                  },
+                };
+
+
+            var data = [trace1];
+            
+            var layout = {
+             title: 'Model Vs. Accuracy',
+             xaxis: {
+               title: 'Model Split',
+               titlefont: {
+                 family: 'Calibri',
+                 size: 18,
+                 color: '#7f7f7f'
+               }
+             },
+             yaxis: {
+               title: 'Accuracy %',
+               titlefont: {
+                 family: 'Calibri',
+                 size: 18,
+                 color: '#7f7f7f'
+               }
+             }
+            };
+
+            Plotly.newPlot('accuracy_plot', data, layout);
+        });
+        
+        Plotly.d3.json('/duration_plot', function(error, data){
+            if (error) return console.warn(error);
+            console.log(data);
+
+            var trace1 = {
+                x: data[0].x,
+                y: data[0].y,
+                name: 'Models',
+                type: 'bar',
+                marker:{
+                    color: data[0].color
+                  },
+                };
+
+            var data = [trace1];
+            
+            var layout = {
+             title: 'Model Vs. Duration',
+             xaxis: {
+               title: 'Model Split',
+               titlefont: {
+                 family: 'Calibri',
+                 size: 18,
+                 color: '#7f7f7f'
+               }
+             },
+             yaxis: {
+               title: 'Duration (seconds)',
+               titlefont: {
+                 family: 'Calibri',
+                 size: 18,
+                 color: '#7f7f7f'
+               }
+             }
+            };
+
+            Plotly.newPlot('duration_plot', data, layout);
+            
+        });
+        
+        Plotly.d3.json('/duration_vs_accuracy_plot', function(error, data){
+            if (error) return console.warn(error);
+            console.log(data);
+
+            var trace1 = {
+                x: data[0].x,
+                y: data[0].y,
+                name: 'Models',
+                mode: 'markers',
+                text: data[0].text,
+                type: 'scatter',
+                marker:{
+                    size: data[0].size,
+                    color: data[0].color
+                  },
+                };
+
+            var data = [trace1];
+            
+            var layout = {
+             title: 'Accuracy Vs. Duration',
+             xaxis: {
+               title: 'Accuracy %',
+               titlefont: {
+                 family: 'Calibri',
+                 size: 18,
+                 color: '#7f7f7f'
+               }
+             },
+             yaxis: {
+               title: 'Duration (seconds)',
+               titlefont: {
+                 family: 'Calibri',
+                 size: 18,
+                 color: '#7f7f7f'
+               }
+             }
+            };
+
+            Plotly.newPlot('duration-vs-accuracy', data, layout);
+        });
+
+
+    </script>
     
 </body>
 </html>
